@@ -26,38 +26,38 @@ It then plots the traffic by week of the year, averaged across all of the years 
 
 After this, another csv file is imported to relate the search traffic to the stock price patterns. It begins by plotting the newly imported stock price data.
 
-![Stock price](/Image/6.PNG)
+![Stock price](/Images/6.PNG)
 
 To allow for relational analysis, the search traffic dataframe is concatenated with the stock price dataframe. Then it slices to the first half of 2020 to analyze this relationship over a smaller timeframe and plots the two variables side by side.
 
-![Stock price vs search trends](/Image/7.PNG)
+![Stock price vs search trends](/Images/7.PNG)
 
 Two new columns - "Lagged Search Trends" and "Stock Volatility", which show the 1-hour lagged search data and the standard deviation, respectively, are added to the combined dataframe. The volatility is plotted, one more column - "Hourly Stock Return", is added to the dataframe, and a correlation table is created for "Stock Volatility", "Lagged Search Trends", and "Hourly Stock Return".
 
-![Stock volatility](/Image/8.PNG)
+![Stock volatility](/Images/8.PNG)
 
-![Correlation table](/Image/9.PNG)
+![Correlation table](/Images/9.PNG)
 
 Next, a time series model was created using FBProphet by using the original search trends dataframe, reseting the index, and renaming the columns to the acceptable format for this model. The model was fit to the formatted dataframe and a future dataframe generated 2000 hours forward from the last entry, which is used to predict future trends.
 
-![Future trends](/Image/10.PNG)
+![Future trends](/Images/10.PNG)
 
 The forecast dataframe is then pared down to show just the price prediction, along with lower and upper bounds, and these are plotted, as well as their components.
 
-![Predictions](/Image/11.PNG)
+![Predictions](/Images/11.PNG)
 
-![Component trends](/Image/12.PNG)
+![Component trends](/Images/12.PNG)
 
 Finally, another dataframe is created by importing the "mercado_daily_revenue.csv" file.
 
-![Revenue](/Image/13.PNG)
+![Revenue](/Images/13.PNG)
 
 A prophet model is created and fitted to this data to predict future revenue. The component trends as well as future revenue forecasts are plotted.
 
-![Revenue components](/Image/14.PNG)
+![Revenue components](/Images/14.PNG)
 
-![Revenue forecast](/Image/15.PNG)
+![Revenue forecast](/Images/15.PNG)
 
 And to finish the analysis, a revenue forecast for the next quarter is produced and formatted for presentation to the finance division.
 
-![Next quarter revenue forecast](/Image/16.PNG)
+![Next quarter revenue forecast](/Images/16.PNG)
