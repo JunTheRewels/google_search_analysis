@@ -1,4 +1,4 @@
-# hw_m11_google_search_analysis
+# google_search_analysis
 
 This file serves to analyze MercadoLibre's search traffic and revenue to identify patterns in search traffic, determine it's correlation with stock volatility, and predict future revenue.
 
